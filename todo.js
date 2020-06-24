@@ -29,11 +29,17 @@ let arrayOfTodos = [
   }
 
   const populateTodos = () => {
-    let horse = document.getElementById("todo-list")
-    let poop = document.createElement('LI')
-    let fork = document.createTextNode(arrayOfTodos[0].title)
-    poop.appendChild(fork)
-    horse.appendChild(poop)
 
+     let horse = document.getElementById("todo-list")
+     for (i=0; i < arrayOfTodos.length; i++){
+     let poop = document.createElement('LI')
+     let fork = document.createTextNode(arrayOfTodos[i].title)
+     poop.appendChild(fork)
+     horse.appendChild(poop)
+    
 
   }
+  }
+  
+
+  
