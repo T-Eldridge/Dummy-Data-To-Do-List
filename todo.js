@@ -1,5 +1,5 @@
 // We'll pre-populate this array with a couple objects just so it's not undefined if your internet connection isn't working properly.
-
+let elementColor = ""
 let arrayOfTodos = [
     {
     "userId": 14,
@@ -57,8 +57,23 @@ let arrayOfTodos = [
      newLi.appendChild(newH3)
      newLi.appendChild(newH4)
      list.appendChild(newLi)
+
+     
+     
+     console.log(elementColor)
+
+     if(arrayOfTodos[i].completed === true){
+       elementColor = "green"
+     } else {
+      elementColor = "red"
+     }
+     newLi.style.color = elementColor
   }
   }
+
+ // turn text red
+
+
 
   // // show id
   // let userID = document.createTextNode(arrayOfTodos[i].id)
