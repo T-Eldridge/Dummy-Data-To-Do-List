@@ -30,16 +30,48 @@ let arrayOfTodos = [
 
   const populateTodos = () => {
 
-     let horse = document.getElementById("todo-list")
-     for (i=0; i < arrayOfTodos.length; i++){
-     let poop = document.createElement('LI')
-     let fork = document.createTextNode(arrayOfTodos[i].title)
-     poop.appendChild(fork)
-     horse.appendChild(poop)
-    
+     let list = document.getElementById("todo-list")
 
+     
+     for (let i=0; i < arrayOfTodos.length; i++){
+      let newLi = document.createElement('LI')
+      let newH1 = document.createElement('H1')
+      let newH2 = document.createElement('H2')
+      let newH3 = document.createElement('H3')
+      let newH4 = document.createElement('H4')
+     
+     let userID = document.createTextNode(arrayOfTodos[i].userId)
+     newH1.appendChild(userID)
+
+     let id = document.createTextNode(arrayOfTodos[i].id)
+     newH2.appendChild(id)
+     
+     let title = document.createTextNode(arrayOfTodos[i].title)
+     newH3.appendChild(title)
+
+     let complete = document.createTextNode(arrayOfTodos[i].completed)
+     newH4.appendChild(complete)
+     
+     newLi.appendChild(newH1)
+     newLi.appendChild(newH2)
+     newLi.appendChild(newH3)
+     newLi.appendChild(newH4)
+     list.appendChild(newLi)
   }
   }
-  
+
+  // // show id
+  // let userID = document.createTextNode(arrayOfTodos[i].id)
+  // Li.appendChild(userID)
+  // list.appendChild(Li)
+
+  // // show title
+  // let userID = document.createTextNode(arrayOfTodos[i].title)
+  // Li.appendChild(userID)
+  // list.appendChild(Li)
+  // // show completed
+  // let userID = document.createTextNode(arrayOfTodos[i].completed)
+  // Li.appendChild(userID)
+  // list.appendChild(Li)
 
   
