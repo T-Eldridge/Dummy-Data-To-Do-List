@@ -14,6 +14,8 @@ let arrayOfTodos = [
     "completed": false
   }]
 
+  let list (document.getElementById)
+
   const fetchTodos = () => {
     fetch('https://jsonplaceholder.typicode.com/todos')
     .then( (response) => response.json())
