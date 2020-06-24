@@ -14,7 +14,9 @@ let arrayOfTodos = [
     "completed": false
   }]
 
-  let list (document.getElementById)
+  let list = () =>{
+    document.getElementById()
+  }
 
   const fetchTodos = () => {
     fetch('https://jsonplaceholder.typicode.com/todos')
@@ -27,5 +29,11 @@ let arrayOfTodos = [
   }
 
   const populateTodos = () => {
+    let horse = document.getElementById("todo-list")
+    let poop = document.createElement('LI')
+    let fork = document.createTextNode(arrayOfTodos[0].title)
+    poop.appendChild(fork)
+    horse.appendChild(poop)
+
 
   }
