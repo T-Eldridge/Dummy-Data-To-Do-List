@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do</title>
+    <link rel="stylesheet" href="todo.css">
 </head>
 <body>
-    <button onclick="fetchTodos()">Fetch Todos</button>
- <button onclick="logTodos()">Log Todos</button>
- <button onclick="populateTodos()">Populate Todos</button>
+ <main>
+    <span>TODDS PRETTY TO-DO LIST</span><br>
+    <button onclick="fetchTodos()">Fetch Todos</button><br>
+    <button onclick="logTodos()">Log Todos</button><br>
+    <button onclick="populateAllTodos()">Populate Todos</button><br>
+    <input  id="entryId" name="entryID" value="" type="text" onkeyup="userNum(this.value)"><br>
+    <button type="button" onclick="filterTodosByUserId()">Submit</button><br>
+    <button type="button" onclick="filterTodosByComplete()">Completed</button><br>
+    <button type="button" onclick="filterTodosByNotComplete()">Incompleted</button><br>
+    <button type="button" onclick="resetTodos()">Reset</button><br>
+ </main>
+
  <ol id="todo-list">
    <!-- LIs will go here -->
  </ol>
